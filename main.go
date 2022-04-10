@@ -7,16 +7,16 @@ import (
 	"github.com/M1racle-Heen/golang_midterm/store_interface/store_struct"
 )
 
+func main() {
+	store()
+}
+
 var (
 	storeMap   map[string]string
 	wg         sync.WaitGroup
 	m          sync.Mutex
 	valueToPut map[string]string
 )
-
-func main() {
-	store()
-}
 
 func store() {
 	storeMap = map[string]string{"1": "Cola", "2": "Bacon", "3": "Egg", "4": "Apple"}
